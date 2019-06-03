@@ -1,7 +1,7 @@
 # TODO
 
-Todo is a simple little app. It allows a user to enter items they need to complete and
-keep track of their completion status.
+Todo is a simple little app. It allows a user to enter, update, and delete items they 
+need to complete and keep track of their completion status.
 
 ## Setup
 
@@ -12,8 +12,9 @@ You will submit all your API calls to the appropriate endpoint on the same site
 
 
 Your job is to get a nice UI around this API completed so users can manage their todo
-lists more effectively. Remember, we'd much rather see an incomplete response than 
-nothing at all. Wherever you get to in the time limit, commit and push it.
+lists more effectively. Remember to commit and push as often as possible, 
+WE'D MUCH RATHER SEE AN INCOMPLETE RESPONSE THAN NOTHING AT ALL. Wherever you get 
+to in the time limit, commit and push it.
 
 
 If you have any questions, issues with the API, or need clarification, please feel
