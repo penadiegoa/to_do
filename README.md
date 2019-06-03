@@ -1,34 +1,22 @@
 # TODO
 
-Todo is a simple little app. It's based on create-react-app and material-ui.
+Todo is a simple little app. It allows a user to enter items they need to complete and
+keep track of their completion status.
 
 ## Setup
 
-To run this project you must have [Node.js](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/lang/en/docs/install) installed.
+To get started, you will want to review the backend API we have setup for you to use.
+Head over to https://todo-api.cogb.us/docs to check out the documentation for the API. 
+You will submit all your API calls to the appropriate endpoint on the same site 
+(/docs is for documentation, /items is for the todos, etc.).
 
-To get started, run these commands:
 
-```
-yarn
-yarn test
-```
+Your job is to get a nice UI around this API completed so users can manage their todo
+lists more effectively. Remember, we'd much rather see an incomplete response than 
+nothing at all. Wherever you get to in the time limit, commit and push it.
 
-You should see three failing tests. Your first job is to get these three tests passing!
 
-Remember, we'd much rather see an incomplete response than nothing at all. Wherever you get to in the time limit, commit and push it.
+If you have any questions, issues with the API, or need clarification, please feel
+free to reach out to either Tyler (tyler@myndshft.com) or Kyle (kyle@myndshft.com).
 
-## Feature One
-
-Each task has a point value associated with it. This represents how important it is to us. The task list should always be shown with the most important tasks at the top of the list.
-
-## Feature Two
-
-We want to make it obvious at a glance which tasks are the really crucial ones. Any task that has a point value 10 or above should have a class 'critical' on it. Any other task should have the class 'normal'.
-
-## Feature Three
-
-Our users are keen to be able to add point values to tasks with a natural language style input. When a user inputs a task name they should be able to say, for example, 'do stuff 10pts' and have a task added of the form `{name: 'do stuff', points: 10}`.
-
-## Feature Four
-
-If you've got some extra time left, it would be great for our users to be able to update the point value of an existing task. Implement the UI however you think best.
+Good luck and we look forward to seeing your submission!
