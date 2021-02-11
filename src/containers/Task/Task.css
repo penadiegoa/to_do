@@ -1,0 +1,49 @@
+.task-container {
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  background: white;
+  border: 1px solid #000;
+  border-radius: 18px;
+}
+
+.checkbox {
+  width: 10%;
+  padding: 5px;
+  border: 1px solid #bfbfbf;
+  border-radius: 2px;
+  background-color: #dedede;
+  text-align: center;
+}
+
+.task-body {
+  margin-left: 10px;
+}
+
+.task-title {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+/* CARD CSS */
+.MuiCard-root {
+  margin: 10px;
+}
+
+.MuiPaper-rounded {
+  border-radius: 18px !important;
+}
+
+.MuiTypography-displayBlock {
+  font-weight: bold !important;
+  font-size: large !important;
+}
+
+.MuiAvatar-root {
+  border-radius: 0 !important;
+}
+
+.MuiAvatar-colorDefault {
+  color: green !important;
+  background-color: #e2e2e2 !important;
+}

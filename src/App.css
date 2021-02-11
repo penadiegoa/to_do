@@ -1,0 +1,37 @@
+header {
+  text-align: center;
+  font-size: 4em;
+  padding: 10px;
+  font-family: fantasy;
+}
+
+.controls {
+  position: relative;
+  width: 60%;
+  left: 20%;
+  text-align: end;
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: #4eb534;
+  height: 40px;
+  width: 75px;
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  background-color: #56c03b;
+}
+
+.tasks-container {
+  position: absolute;
+  height: 75%;
+  width: 60%;
+  left: 20%;
+  background: #e2e2e2;
+  border: 2px solid grey;
+  border-radius: 20px;
+}
