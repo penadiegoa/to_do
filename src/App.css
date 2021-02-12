@@ -1,21 +1,22 @@
+.app {
+  height: 100vh;
+  background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+
 .app-header {
   text-align: center;
   font-size: 3.5em;
+  color: #636363;
   padding: 10px;
-  font-family: Poppins;
+  font-family: VeganStyle;
   font-weight: bolder;
   margin-bottom: 20px;
   border-bottom: 1px #e2e2e2;;
-  background: linear-gradient(90deg, 
-  rgba(78,181,52,1) 0%,
-  rgba(255,255,255,1) 45%, 
-  rgba(255,255,255,1) 55%, 
-  rgba(78,181,52,1) 100%
-  );
 }
 
 .btn {
-  background-color: #4eb534;
+  background-color: #22c1c3;
   height: 40px;
   width: 80px;
   color: black;
@@ -24,7 +25,11 @@
 }
 
 .btn:hover {
-  background-color: #6dc757;
+  background-color: #55c3c4;
+}
+
+#credit {
+  font-size: medium;
 }
 
 

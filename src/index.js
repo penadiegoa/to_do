@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import axios from 'axios';
 import reportWebVitals from './reportWebVitals';
-import './assets/fonts/Poppins-Medium.ttf';
 
 
 axios.defaults.baseURL = 'https://todo-api.cogb.us';

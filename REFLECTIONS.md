@@ -19,3 +19,10 @@
   * Luckily, I didn't have to implement anything new and just reused the same container. Upon clicking on the checkbox, the render cycle takes care of moving the task to the finished side.
 
 * ##### The cards I'm using (from Material UI) really make the tasks look good but I think they can be slimmed down a bit more. There's a lot of white space.
+
+* ##### Lastly, I was really unhappy with the style (color, title font of the application) so I just went with a nice colorful background.
+  * Can't say I love it as the app's default theme colors but it is certainly less bland than the white/green that I was using before. It just looks cool to me right now.
+
+  * I downloaded a cool font that kind of goes with the gradient vibe. I am happy with it at the moment.
+
+* #### Overall, I really enjoyed building this little app. Thankfully, the API was well documented and I had no problem consuming it other than the silly mistake mentioned above.

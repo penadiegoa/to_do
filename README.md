@@ -1,7 +1,6 @@
 # TODO
 
-Todo is a simple little app. It allows a user to enter, update, and delete items they 
-need to complete and keep track of their completion status.
+Todo is a simple little app. It allows a user to enter, update, and delete items they need to complete and keep track of their completion status.
 
 ## Setup
 
@@ -11,8 +10,7 @@ You will submit all your API calls to the appropriate endpoint on the same site
 (/docs is for documentation, /items is for the todos, etc.).
 
 
-Your job is to get a nice UI around this API completed so users can manage their todo
-lists more effectively. Remember to commit and push as often as possible, 
+Your job is to get a nice UI around this API completed so users can manage their todo lists more effectively. Remember to commit and push as often as possible, 
 WE'D MUCH RATHER SEE AN INCOMPLETE RESPONSE THAN NOTHING AT ALL. Wherever you get 
 to in the time limit, commit and push it.
 

@@ -15,7 +15,7 @@ const App = () => {
   return (
     <div className="app">
       <header className="app-header">
-        TO DO
+        <span>To Do</span><span id="credit"> by Diego Pena</span>
       </header>
 
       <Router>
@@ -26,8 +26,6 @@ const App = () => {
           <Redirect to="/"/>
         </Switch>
       </Router>
-      
-
     </div>
   );
 }
