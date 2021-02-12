@@ -1,7 +1,8 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Task from "../Task/Task"
+import { useEffect, useState } from "react";
+import Task from "../components/Task"
+import './Tasks.css';
 
 const Tasks = () => {
   
@@ -10,8 +11,14 @@ const Tasks = () => {
   useEffect(() => {
     axios.get('/items/').then(resp => {
       const latestTasks = [];
-      resp.data.forEach(post => {
-        latestTasks.push(post);
+      resp.data.forEach(task => {
+        latestTasks.push({
+          id: task.id,
+          title: task.title,
+          description: task.description,
+          created: new Date(task.created).toLocaleDateString('en-US'),
+          done: task.done
+        });
       });
       setTasks(latestTasks);
     }).catch(error => {
@@ -27,7 +34,7 @@ const Tasks = () => {
     });
 
     axios.put('/items/'+id, updatedTask).then(resp => {
-      console.log(resp);
+      // console.log(resp);
       const updatedTasks = [];
       tasks.forEach(task => {
         if (task.id === id) {
@@ -44,8 +51,19 @@ const Tasks = () => {
     });
   };
 
-  const taskEditHandler = () => {
-    // TO DO: edit body of task
+  const deleteHandler = id => {
+    axios.delete('/items/'+id).then(resp => {
+      // console.log(resp);
+      const updatedTasks = [];
+      tasks.forEach(task => {
+        if (task.id !== id) {
+          updatedTasks.push(task);
+        };
+      });
+      setTasks(updatedTasks);
+    }).catch(error => {
+      console.log(error);
+    });
   };
 
   return (
@@ -58,14 +76,17 @@ const Tasks = () => {
         </Link>
       </div>
       <div className="tasks-container">
-        {tasks.map(post => 
+        {tasks.map(task => 
           <Task 
-            key={post.id}
-            id={post.id}
-            title={post.title}
-            description={post.description}
-            done={post.done}
+            key={task.id}
+            id={task.id}
+            title={task.title}
+            created={task.created}
+            description={task.description}
+            done={task.done}
+            // editHandler={editHandler}
             statusHandler={statusHandler}
+            deleteHandler={deleteHandler}
           />
         )}
       </div>

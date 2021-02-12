@@ -1,23 +1,31 @@
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import './App.css';
-
-import Tasks from './containers/Tasks/Tasks';
+import Tasks from './containers/Tasks';
 import NewTask from './components/NewTask';
-import EditTask from "./components/EditTask";
+import EditTask from './components/EditTask';
+import './App.css';
+import { 
+  Route, 
+  Switch, 
+  Redirect, 
+  BrowserRouter as Router 
+} from "react-router-dom";
 
 const App = () => {
   
   return (
-    <div className="App">
-      <header className="App-header">
-        TODO
+    <div className="app">
+      <header className="app-header">
+        TO DO
       </header>
 
       <Router>
-        <Route path="/" exact component={Tasks} />
-        <Route path="/add" exact component={NewTask} />
-        <Route path="/edit" exact component={EditTask} />
+        <Switch>
+          <Route path="/" exact component={Tasks}/>
+          <Route path="/add" exact component={NewTask} />
+          <Route path="/edit" exact component={EditTask} />
+          <Redirect to="/"/>
+        </Switch>
       </Router>
+      
 
     </div>
   );

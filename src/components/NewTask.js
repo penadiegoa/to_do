@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { Link, useHistory } from 'react-router-dom';
 import { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import './NewTask.css';
 
 
@@ -20,7 +20,6 @@ const NewTask = () => {
       done: done
     });
     
-    console.log(newTask);
     axios.post('/items', newTask)
       .then(resp => {
         console.log(resp);

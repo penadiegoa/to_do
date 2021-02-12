@@ -25,6 +25,7 @@
   font-weight: bold;
 }
 
+
 /* CARD CSS */
 .MuiCard-root {
   margin: 10px;
@@ -34,9 +35,13 @@
   border-radius: 18px !important;
 }
 
-.MuiTypography-displayBlock {
+.MuiCardHeader-title.MuiTypography-displayBlock {
   font-weight: bold !important;
   font-size: large !important;
+}
+
+.MuiCardHeader-subheader.MuiTypography-displayBlock {
+  font-style: italic;
 }
 
 .MuiAvatar-root {

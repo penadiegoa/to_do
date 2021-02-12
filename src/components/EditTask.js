@@ -1,25 +1,50 @@
+import axios from "axios";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import './EditTask.css';
 
 const EditTask = props => {
 
-  const [title, setTitle] = useState(props.title);
-  const [description, setDescription] = useState(props.description);
+  const history = useHistory();
 
-  const updateHandler = event => {
-    // TO DO: determine if post changed at all
-    // TO DO: UPDATE request to API
-  }
+  const id = props.location.state.id;
+  const done = props.location.state.done;
+  const titleInit = props.location.state.title;
+  const descriptionInit = props.location.state.description;
+  const [title, setTitle] = useState(props.location.state.title);
+  const [description, setDescription] = useState(props.location.state.description);
+
+  const editHandler = event => {
+    event.preventDefault();
+
+    if (title !== titleInit || description !== descriptionInit) {
+      const updatedTask = JSON.stringify({
+        title: title,
+        description: description,
+        done: done
+      });
+      axios.put('/items/'+id, updatedTask)
+        .then(resp => {
+          console.log(resp);
+          history.push('/');
+        }).catch(error => {
+          console.log(error);
+        });
+    } else {
+      alert("Task info didn't change");
+    };
+  };
 
   return (
     <div className="form-container">
       <Link to="/">
-      <button className="btn">
-        Back
-      </button>
+        <button className="btn">
+          Back
+        </button>
       </Link>
+
       <h2>Edit task:</h2>
-      <form onSubmit={updateHandler}>
+      <form onSubmit={editHandler}>
         <label htmlFor="title">Title</label>
         <input 
           className="form-input"
