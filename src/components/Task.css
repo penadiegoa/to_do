@@ -52,3 +52,7 @@
   color: green !important;
   background-color: #e2e2e2 !important;
 }
+
+.MuiCardContent-root:last-child {
+  padding-bottom: 18px !important;
+}

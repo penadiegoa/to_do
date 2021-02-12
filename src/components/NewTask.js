@@ -22,14 +22,14 @@ const NewTask = () => {
     
     axios.post('/items', newTask)
       .then(resp => {
-        console.log(resp);
+        // console.log(resp);
         history.push('/');
       }).catch(error => {
         console.log(error);
       });
   };
 
-  
+
   return (
     <div className="form-container">
       <Link to="/">
@@ -46,7 +46,9 @@ const NewTask = () => {
           type="text" 
           name="title" 
           value={title} 
+          required={true}
           className="form-input"
+          placeholder="ex. Wash the dishes..."
           onChange={event => {setTitle(event.target.value)}}
         />
         

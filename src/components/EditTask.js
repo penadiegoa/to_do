@@ -48,11 +48,13 @@ const EditTask = props => {
       <form onSubmit={editHandler}>
         <label htmlFor="title">Title</label>
         <input 
-          className="form-input"
           type="text" 
           name="title" 
           id="title"
-          value={title} 
+          value={title}
+          required={true}
+          className="form-input"
+          placeholder="ex. Wash the dishes..."
           onChange={event => {setTitle(event.target.value)}}
         />
         

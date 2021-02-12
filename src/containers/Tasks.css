@@ -1,19 +1,24 @@
+.kanban {
+  display: flex;
+  height: 75vh;
+}
+
 .tasks-container {
-  position: absolute;
-  height: 75%;
-  width: 60%;
-  left: 20%;
+  /* position: absolute; */
+  /* height: 75%; */
+  width: 38%;
+  /* left: 20%; */
+  margin-left: 8%;
   background: #e2e2e2;
   border: 2px solid grey;
   border-radius: 20px;
   contain: content;
   overflow-y: scroll;
+  /* display: inline-block; */
 }
 
 .controls {
-  position: relative;
-  width: 60%;
-  left: 20%;
-  text-align: end;
-  margin-bottom: 10px;
+  text-align: initial;
+  margin: 12px;
+  margin-inline: 8%;
 }

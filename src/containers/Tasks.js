@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Task from "../components/Task"
 import './Tasks.css';
 
+
 const Tasks = () => {
   
   const [tasks, setTasks] = useState([]);
@@ -66,6 +67,7 @@ const Tasks = () => {
     });
   };
 
+
   return (
     <div>
       <div className="controls">
@@ -75,20 +77,45 @@ const Tasks = () => {
           </button>
         </Link>
       </div>
-      <div className="tasks-container">
-        {tasks.map(task => 
-          <Task 
-            key={task.id}
-            id={task.id}
-            title={task.title}
-            created={task.created}
-            description={task.description}
-            done={task.done}
-            // editHandler={editHandler}
-            statusHandler={statusHandler}
-            deleteHandler={deleteHandler}
-          />
-        )}
+      <div className="kanban">
+        <div className="tasks-container">
+          <h2 style={{textAlign: 'center'}}>PENDING</h2>
+          {tasks.map(task => {
+            if (!task.done) {
+              return (
+                <Task 
+                  key={task.id}
+                  id={task.id}
+                  title={task.title}
+                  created={task.created}
+                  description={task.description}
+                  done={task.done}
+                  statusHandler={statusHandler}
+                  deleteHandler={deleteHandler}
+                />
+              )
+            }
+          })}
+        </div>
+        <div className="tasks-container">
+          <h2 style={{textAlign: 'center'}}>FINISHED</h2>
+          {tasks.map(task => {
+            if (task.done) {
+              return (
+                <Task 
+                  key={task.id}
+                  id={task.id}
+                  title={task.title}
+                  created={task.created}
+                  description={task.description}
+                  done={task.done}
+                  statusHandler={statusHandler}
+                  deleteHandler={deleteHandler}
+                />
+              )
+            }
+          })}
+        </div>
       </div>
     </div>
   );
