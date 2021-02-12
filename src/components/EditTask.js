@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import './EditTask.css';
+import './Form.css';
+
 
 const EditTask = props => {
 
   const history = useHistory();
-
   const id = props.location.state.id;
   const done = props.location.state.done;
   const titleInit = props.location.state.title;
@@ -35,6 +35,7 @@ const EditTask = props => {
     };
   };
 
+
   return (
     <div className="form-container">
       <Link to="/">
@@ -58,7 +59,7 @@ const EditTask = props => {
         <label htmlFor="description">Description</label>
         <textarea 
           className="form-input"
-          cols="40" 
+          cols="50" 
           rows="10"
           name="description" 
           id="description"

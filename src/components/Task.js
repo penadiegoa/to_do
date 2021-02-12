@@ -16,10 +16,10 @@ import {
 } from "@material-ui/core";
 import './Task.css';
 
+
 const Task = props => {
 
-  const done = props.done ? <DoneIcon style={{ fontSize: 45 }}/> : ""
-  
+  const done = props.done ? <DoneIcon style={{ fontSize: 45 }}/> : "";  
   const buttonRef = useRef(null);
   const [anchorEl, setAnchorEl] = useState(false);
   

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import './NewTask.css';
+import './Form.css';
 
 
 const NewTask = () => {
@@ -29,47 +29,51 @@ const NewTask = () => {
       });
   };
 
+  
   return (
     <div className="form-container">
       <Link to="/">
-      <button className="btn">
-        Back
-      </button>
+        <button className="btn">
+          Back
+        </button>
       </Link>
+
       <h2>Add a new task:</h2>
       <form onSubmit={submitHandler}>
         <label htmlFor="title">Title</label>
         <input 
-          className="form-input"
+          id="title"
           type="text" 
           name="title" 
-          id="title"
           value={title} 
+          className="form-input"
           onChange={event => {setTitle(event.target.value)}}
         />
         
         <label htmlFor="description">Description</label>
         <textarea 
-          className="form-input"
-          cols="40" 
+          cols="50" 
           rows="10"
-          name="description" 
           id="description"
+          name="description" 
           value={description}
+          className="form-input"
           onChange={event => {setDescription(event.target.value)}}>
         </textarea>
 
-        <label htmlFor="done">Already Done?</label>
-        <input 
-          className="form-input"
-          type="checkbox" 
-          name="done" 
-          id="done"
-        />
+        <div className="form-done">
+          <label htmlFor="done">Already Done?</label>
+          <input 
+            id="done"
+            name="done" 
+            type="checkbox" 
+            className="form-input"
+            />
+        </div>
 
         <button className="btn" type="submit">
           Submit
-          </button>
+        </button>
       </form>
     </div>
   );
